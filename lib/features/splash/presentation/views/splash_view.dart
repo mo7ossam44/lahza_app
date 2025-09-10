@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:lahza/constants.dart';
 import 'package:lahza/features/splash/presentation/views/widgets/splash_view_body.dart';
 
 class SplashView extends StatelessWidget {
