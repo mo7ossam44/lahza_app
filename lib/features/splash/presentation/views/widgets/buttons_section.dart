@@ -1,11 +1,10 @@
 import 'package:lahza/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:lahza/features/authentication/presentation/views/login_view.dart';
 import 'package:lahza/features/splash/presentation/views/widgets/custom_button.dart';
 
 class ButtonsSction extends StatelessWidget {
-  const ButtonsSction({
-    super.key,
-  });
+  const ButtonsSction({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,6 +30,7 @@ class ButtonsSction extends StatelessWidget {
               textColor: Colors.white,
               text: 'Sign up with Google',
               imagePath: 'assets/logos/google.png',
+              onPressed: () {},
             ),
             SizedBox(height: 15),
             CustomButton(
@@ -39,6 +39,11 @@ class ButtonsSction extends StatelessWidget {
               logoColor: Colors.orange,
               text: 'Log in to my account',
               imagePath: 'assets/logos/user.png',
+              onPressed: () {
+                Navigator.of(
+                  context,
+                ).push(MaterialPageRoute(builder: (context) => LoginView()));
+              },
             ),
           ],
         ),
