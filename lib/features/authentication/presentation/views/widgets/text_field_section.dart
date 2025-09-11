@@ -19,7 +19,7 @@ class TextFieldsSection extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(height: 20),
+        SizedBox(height: 40),
         CustomTextFormField(
           hintText: 'Username',
           icon: Icon(Icons.person_2_outlined),
