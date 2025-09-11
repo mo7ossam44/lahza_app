@@ -5,25 +5,25 @@ class CustomButton extends StatelessWidget {
   const CustomButton({
     super.key,
     this.logoColor,
+    this.imagePath,
     required this.text,
     required this.color,
     required this.onPressed,
     required this.textColor,
-    required this.imagePath,
   });
 
   final String text;
   final Color color;
   final Color textColor;
   final Color? logoColor;
-  final String imagePath;
+  final String? imagePath;
   final void Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
       minWidth: 370,
-      onPressed:onPressed,
+      onPressed: onPressed,
       color: color,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadiusGeometry.circular(12),
@@ -33,7 +33,9 @@ class CustomButton extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset(imagePath, width: 30, color: logoColor),
+          imagePath != null
+              ? Image.asset(imagePath!, width: 30, color: logoColor)
+              : SizedBox(),
           SizedBox(width: 10),
           Text(
             text,
