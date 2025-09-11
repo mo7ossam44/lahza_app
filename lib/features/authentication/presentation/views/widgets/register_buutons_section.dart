@@ -1,42 +1,19 @@
+
 import 'package:flutter/material.dart';
 import 'package:lahza/constants.dart';
-import 'package:lahza/features/authentication/presentation/views/register_view.dart';
+import 'package:lahza/features/authentication/presentation/views/login_view.dart';
 import 'package:lahza/features/splash/presentation/views/widgets/custom_button.dart';
 
-class LoginButtonsSection extends StatelessWidget {
-  const LoginButtonsSection({super.key});
+class RegisterButtonsSection extends StatelessWidget {
+  const RegisterButtonsSection({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: 20),
         CustomButton(
-          text: 'Sign In',
+          text: 'Sign Up',
           color: Colors.orange,
-          onPressed: () {},
-          textColor: Colors.white,
-        ),
-        SizedBox(height: 20),
-        Text(
-          'or',
-          style: TextStyle(
-            fontFamily: kSecondrayFont,
-            fontSize: 15,
-            color: Colors.grey.shade600,
-          ),
-        ),
-        SizedBox(height: 20),
-        CustomButton(
-          text: 'Sign In with Google',
-          color: Colors.red,
-          onPressed: () {},
-          textColor: Colors.white,
-        ),
-        SizedBox(height: 20),
-        CustomButton(
-          text: 'Sign In with Facebook',
-          color: Colors.blueAccent,
           onPressed: () {},
           textColor: Colors.white,
         ),
@@ -45,7 +22,7 @@ class LoginButtonsSection extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "Don't have an account? ",
+              "Have an account? ",
               style: TextStyle(
                 fontSize: 15,
                 fontFamily: kSecondrayFont,
@@ -56,10 +33,10 @@ class LoginButtonsSection extends StatelessWidget {
               onPressed: () {
                 Navigator.of(
                   context,
-                ).push(MaterialPageRoute(builder: (context) => RegisterView()));
+                ).push(MaterialPageRoute(builder: (context) => LoginView()));
               },
               child: Text(
-                "Sign Up",
+                "Sign in",
                 style: TextStyle(
                   fontSize: 15,
                   fontFamily: kSecondrayFont,
