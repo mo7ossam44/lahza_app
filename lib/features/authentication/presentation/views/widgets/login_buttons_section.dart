@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lahza/constants.dart';
 import 'package:lahza/features/authentication/presentation/views/register_view.dart';
+import 'package:lahza/features/home/presentation/views/home_view.dart';
 import 'package:lahza/features/splash/presentation/views/widgets/custom_button.dart';
 
 class LoginButtonsSection extends StatelessWidget {
@@ -14,7 +15,11 @@ class LoginButtonsSection extends StatelessWidget {
         CustomButton(
           text: 'Sign In',
           color: Colors.orange,
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(
+              context,
+            ).push(MaterialPageRoute(builder: (context) => HomeView()));
+          },
           textColor: Colors.white,
         ),
         SizedBox(height: 20),
