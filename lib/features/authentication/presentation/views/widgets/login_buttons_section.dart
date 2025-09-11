@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:lahza/constants.dart';
 import 'package:lahza/features/splash/presentation/views/widgets/custom_button.dart';
@@ -18,20 +17,52 @@ class LoginButtonsSection extends StatelessWidget {
           textColor: Colors.white,
         ),
         SizedBox(height: 20),
-        Text('or', style: TextStyle(fontFamily: kSecondrayFont, fontSize: 15)),
+        Text(
+          'or',
+          style: TextStyle(
+            fontFamily: kSecondrayFont,
+            fontSize: 15,
+            color: Colors.grey.shade600,
+          ),
+        ),
         SizedBox(height: 20),
         CustomButton(
           text: 'Sign In with Google',
-          color: Colors.white,
+          color: Colors.red,
           onPressed: () {},
-          textColor: Colors.orange,
+          textColor: Colors.white,
         ),
         SizedBox(height: 20),
         CustomButton(
           text: 'Sign In with Facebook',
-          color: Colors.white,
+          color: Colors.blueAccent,
           onPressed: () {},
-          textColor: Colors.blueAccent,
+          textColor: Colors.white,
+        ),
+        SizedBox(height: 20),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "Don't have an account? ",
+              style: TextStyle(
+                fontSize: 15,
+                fontFamily: kSecondrayFont,
+                color: Colors.grey.shade600,
+              ),
+            ),
+            TextButton(
+              onPressed: () {},
+              child: Text(
+                "Sign Up",
+                style: TextStyle(
+                  fontSize: 15,
+                  fontFamily: kSecondrayFont,
+                  color: Colors.grey.shade800,
+                ),
+              ),
+            ),
+          ],
         ),
       ],
     );
